@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "generated": "2026-05-06T12:47:45.571Z",
+    "version": "1.0.0",
+    "timestamp": "2026-05-06T12:47:45.571Z",
+    "config": "config/my-search.json",
+    "conditions": [
+      "cartItem",
+      "weatherRain"
+    ],
+    "seedRange": {
+      "min": 50000000,
+      "max": 50005000
+    },
+    "gameVersion": "1.6"
+  },
+  "summary": {
+    "totalFound": 5,
+    "topSeed": "50000086",
+    "topScore": "128.31",
+    "averageScore": "128.31"
+  },
+  "results": [
+    {
+      "rank": 1,
+      "seed": "50000086",
+      "score": 128.31,
+      "grade": "F",
+      "breakdown": {
+        "cartItem": {
+          "score": 880,
+          "grade": "S"
+        },
+        "weatherRain": {
+          "score": 510,
+          "grade": "C"
+        }
+      },
+      "details": {
+        "cartItem": {
+          "items": [
+            "Rare Seed",
+            "Rare Seed"
+          ],
+          "found": [
+            {
+              "day": 5,
+              "item": "Rare Seed",
+              "price": 3000,
+              "quantity": 1
+            },
+            {
+              "day": 7,
+              "item": "Rare Seed",
+              "price": 4000,
+              "quantity": 1
+            }
+          ],
+          "expected": [
+            "Red Cabbage Seeds",
+            "Rare Seed"
+          ],
+          "season": "spring Y1",
+          "visitsChecked": [
+            "Day 5",
+            "Day 7"
+          ],
+          "matched": true
+        },
+        "weatherRain": {
+          "rainDays": 8,
+          "days": 8,
+          "minDays": 6,
+          "actual": 8,
+          "rainDayList": [
+            5,
+            6,
+            7,
+            8,
+            25,
+            26,
+            27,
+            28
+          ],
+          "expected": "6-28",
+          "inRange": true
+        }
+      },
+      "evaluatedAt": "2026-05-06T12:47:45.229Z"
+    },
+    {
+      "rank": 2,
+      "seed": "50000093",
+      "score": 128.31,
+      "grade": "F",
+      "breakdown": {
+        "cartItem": {
+          "score": 880,
+          "grade": "S"
+        },
+        "weatherRain": {
+          "score": 510,
+          "grade": "C"
+        }
+      },
+      "details": {
+        "cartItem": {
+          "items": [
+            "Rare Seed",
+            "Rare Seed"
+          ],
+          "found": [
+            {
+              "day": 5,
+              "item": "Rare Seed",
+              "price": 5000,
+              "quantity": 1
+            },
+            {
+              "day": 7,
+              "item": "Rare Seed",
+              "price": 4000,
+              "quantity": 1
+            }
+          ],
+          "expected": [
+            "Red Cabbage Seeds",
+            "Rare Seed"
+          ],
+          "season": "spring Y1",
+          "visitsChecked": [
+            "Day 5",
+            "Day 7"
+          ],
+          "matched": true
+        },
+        "weatherRain": {
+          "rainDays": 8,
+          "days": 8,
+          "minDays": 6,
+          "actual": 8,
+          "rainDayList": [
+            5,
+            6,
+            7,
+            8,
+            25,
+            26,
+            27,
+            28
+          ],
+          "expected": "6-28",
+          "inRange": true
+        }
+      },
+      "evaluatedAt": "2026-05-06T12:47:45.230Z"
+    },
+    {
+      "rank": 3,
+      "seed": "50000217",
+      "score": 128.31,
+      "grade": "F",
+      "breakdown": {
+        "cartItem": {
+          "score": 880,
+          "grade": "S"
+        },
+        "weatherRain": {
+          "score": 510,
+          "grade": "C"
+        }
+      },
+      "details": {
+        "cartItem": {
+          "items": [
+            "Rare Seed",
+            "Rare Seed"
+          ],
+          "found": [
+            {
+              "day": 5,
+              "item": "Rare Seed",
+              "price": 3000,
+              "quantity": 1
+            },
+            {
+              "day": 7,
+              "item": "Rare Seed",
+              "price": 5000,
+              "quantity": 1
+            }
+          ],
+          "expected": [
+            "Red Cabbage Seeds",
+            "Rare Seed"
+          ],
+          "season": "spring Y1",
+          "visitsChecked": [
+            "Day 5",
+            "Day 7"
+          ],
+          "matched": true
+        },
+        "weatherRain": {
+          "rainDays": 8,
+          "days": 8,
+          "minDays": 6,
+          "actual": 8,
+          "rainDayList": [
+            5,
+            6,
+            7,
+            8,
+            25,
+            26,
+            27,
+            28
+          ],
+          "expected": "6-28",
+          "inRange": true
+        }
+      },
+      "evaluatedAt": "2026-05-06T12:47:45.289Z"
+    },
+    {
+      "rank": 4,
+      "seed": "50000224",
+      "score": 128.31,
+      "grade": "F",
+      "breakdown": {
+        "cartItem": {
+          "score": 880,
+          "grade": "S"
+        },
+        "weatherRain": {
+          "score": 510,
+          "grade": "C"
+        }
+      },
+      "details": {
+        "cartItem": {
+          "items": [
+            "Rare Seed",
+            "Rare Seed"
+          ],
+          "found": [
+            {
+              "day": 5,
+              "item": "Rare Seed",
+              "price": 3000,
+              "quantity": 1
+            },
+            {
+              "day": 7,
+              "item": "Rare Seed",
+              "price": 4000,
+              "quantity": 1
+            }
+          ],
+          "expected": [
+            "Red Cabbage Seeds",
+            "Rare Seed"
+          ],
+          "season": "spring Y1",
+          "visitsChecked": [
+            "Day 5",
+            "Day 7"
+          ],
+          "matched": true
+        },
+        "weatherRain": {
+          "rainDays": 8,
+          "days": 8,
+          "minDays": 6,
+          "actual": 8,
+          "rainDayList": [
+            5,
+            6,
+            7,
+            8,
+            25,
+            26,
+            27,
+            28
+          ],
+          "expected": "6-28",
+          "inRange": true
+        }
+      },
+      "evaluatedAt": "2026-05-06T12:47:45.289Z"
+    },
+    {
+      "rank": 5,
+      "seed": "50000348",
+      "score": 128.31,
+      "grade": "F",
+      "breakdown": {
+        "cartItem": {
+          "score": 880,
+          "grade": "S"
+        },
+        "weatherRain": {
+          "score": 510,
+          "grade": "C"
+        }
+      },
+      "details": {
+        "cartItem": {
+          "items": [
+            "Rare Seed",
+            "Rare Seed"
+          ],
+          "found": [
+            {
+              "day": 5,
+              "item": "Rare Seed",
+              "price": 4000,
+              "quantity": 1
+            },
+            {
+              "day": 7,
+              "item": "Rare Seed",
+              "price": 5000,
+              "quantity": 1
+            }
+          ],
+          "expected": [
+            "Red Cabbage Seeds",
+            "Rare Seed"
+          ],
+          "season": "spring Y1",
+          "visitsChecked": [
+            "Day 5",
+            "Day 7"
+          ],
+          "matched": true
+        },
+        "weatherRain": {
+          "rainDays": 8,
+          "days": 8,
+          "minDays": 6,
+          "actual": 8,
+          "rainDayList": [
+            5,
+            6,
+            7,
+            8,
+            25,
+            26,
+            27,
+            28
+          ],
+          "expected": "6-28",
+          "inRange": true
+        }
+      },
+      "evaluatedAt": "2026-05-06T12:47:45.348Z"
+    }
+  ]
+}

@@ -128,12 +128,38 @@ async function main() {
             results.forEach((r, i) => {
                 console.log(`\n#${r.rank} Seed: ${r.seed}`);
                 console.log(`   Score: ${r.score.toFixed(2)} | Grade: ${getGrade(r.score)}`);
-                const highlights = Object.entries(r.details || {})
-                    .filter(([_, d]) => d?.found?.length > 0)
-                    .map(([k, d]) => `${k}: ${d.found.length} match(es)`);
-                if (highlights.length > 0) {
-                    console.log(`   Highlights: ${highlights.join('; ')}`);
+                
+                // 展示详细条件信息
+                if (r.details && Object.keys(r.details).length > 0) {
+                    console.log(`   Conditions Met:`);
+                    for (const [condName, condDetails] of Object.entries(r.details)) {
+                        if (condDetails) {
+                            // 根据不同条件类型格式化输出
+                            let conditionDesc = '';
+                            
+                            if (condName.includes('CartItem') || condName.includes('cartItem')) {
+                                const items = condDetails.items || condDetails.found || [];
+                                conditionDesc = `[Cart Item] Items: ${items.join(', ')}`;
+                            } else if (condName.includes('WeatherRain') || condName.includes('weatherRain')) {
+                                const days = condDetails.rainDays || condDetails.days || 'N/A';
+                                const minDays = condDetails.minDays || 'N/A';
+                                conditionDesc = `[Weather Rain] Days: ${days} (Min: ${minDays})`;
+                            } else if (condName.includes('SeasonItem') || condName.includes('seasonItem')) {
+                                const events = condDetails.events || condDetails.found || [];
+                                conditionDesc = `[Season Event] Events: ${events.join(', ')}`;
+                            } else {
+                                // 通用格式
+                                const found = condDetails.found || condDetails.value || 'N/A';
+                                conditionDesc = `[${condName}] ${JSON.stringify(found)}`;
+                            }
+                            
+                            const weight = r.breakdown?.[condName] !== undefined ? `(Weight: ${r.breakdown[condName]})` : '';
+                            console.log(`   - ${conditionDesc} ${weight}`);
+                        }
+                    }
                 }
+                
+                console.log('------------------------------------------------------------');
             });
         }
 

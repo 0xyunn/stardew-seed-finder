@@ -68,7 +68,15 @@ class WeatherRainCondition extends BaseCondition {
 
         return {
             score: score * this.weight,
-            details: { actual: rainCount, rainDays, expected: `${minDays}-${maxDays || '∞'}`, inRange }
+            details: {
+                rainDays: rainCount,
+                days: rainCount,
+                minDays: minDays,
+                actual: rainCount,
+                rainDayList: rainDays,
+                expected: `${minDays}-${maxDays || '∞'}`,
+                inRange
+            }
         };
     }
 

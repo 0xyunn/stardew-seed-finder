@@ -13,9 +13,19 @@
       "params": {
         "season": "spring",
         "year": 1,
-        "items": ["Red Cabbage Seeds", "Coffee Bean", "Rare Seed"],
+        "items": ["Red Cabbage Seeds", "Rare Seed"],
         "mustHave": true,
         "weekOffset": 0
+      }
+    },
+    {
+      "type": "weatherRain",
+      "enabled": true,
+      "weight": 5,
+      "params": {
+        "season": "spring",
+        "year": 1,
+        "minDays": 6
       }
     }
   ]
