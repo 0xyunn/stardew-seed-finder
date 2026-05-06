@@ -1,0 +1,26 @@
+{
+  "name": "stardew-seed-finder",
+  "version": "1.0.0",
+  "description": "Multi-condition Stardew Valley seed searcher - backend only",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js --verbose",
+    "test": "node --test"
+  },
+  "keywords": ["stardew-valley", "seed-predictor", "rng"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "winston": "^3.11.0",
+    "big-integer": "^1.6.52",
+    "xxhashjs": "^0.2.2",
+    "p-limit": "^3.1.0",
+    "commander": "^11.1.0",
+    "lodash": "^4.17.21"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

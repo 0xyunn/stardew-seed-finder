@@ -1,0 +1,22 @@
+{
+  "search": {
+    "seedRange": { "min": 50000000, "max": 50005000 },
+    "concurrency": 4,
+    "topResults": 5
+  },
+  "game": { "version": "1.6", "useLegacyRandom": false },
+  "conditions": [
+    {
+      "type": "cartItem",
+      "enabled": true,
+      "weight": 8,
+      "params": {
+        "season": "spring",
+        "year": 1,
+        "items": ["Red Cabbage Seeds", "Coffee Bean", "Rare Seed"],
+        "mustHave": true,
+        "weekOffset": 0
+      }
+    }
+  ]
+}
