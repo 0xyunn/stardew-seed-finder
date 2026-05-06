@@ -14,7 +14,15 @@ class WeatherRainCondition extends BaseCondition {
     }
 
     async evaluate(seed, gameData) {
-        const { season, year, minDays = 0, maxDays = 28 } = this.params;
+        const { minDays = 0, maxDays = 28 } = this.params;
+        // 从 gameData 获取季节信息，如果没有则使用 params 中的
+        const season = gameData?.season || this.params.season;
+        const year = gameData?.year || this.params.year || 1;
+        
+        if (!season) {
+            return { score: -100, details: { error: 'Season is required' } };
+        }
+        
         const seasonIndex = ['spring', 'summer', 'fall', 'winter'].indexOf(season.toLowerCase());
         let rainCount = 0;
         const rainDays = [];

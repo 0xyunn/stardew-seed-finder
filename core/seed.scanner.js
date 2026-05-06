@@ -162,7 +162,15 @@ class SeedScanner {
             const details = {};
 
             for (const condition of this.conditions) {
-                const result = await condition.evaluate(seed, this.gameConfig);
+                // 为条件提供完整的 gameData（包含季节和年份信息）
+                // 从配置中获取第一个条件的季节/年份参数作为默认值
+                const firstCondParams = this.conditions[0]?.params || {};
+                const gameData = {
+                    ...this.gameConfig,
+                    season: firstCondParams.season || 'spring',
+                    year: firstCondParams.year || 1
+                };
+                const result = await condition.evaluate(seed, gameData);
                 breakdown[condition.name] = result.score;
                 details[condition.name] = result.details;
                 totalScore += result.score;
