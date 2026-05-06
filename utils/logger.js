@@ -68,6 +68,13 @@ logger.getChildLogger = function(name) {
     return logger.child({ component: name });
 };
 
+// 确保 fatal 方法存在（winston 3.x 默认没有 fatal 级别）
+if (!logger.fatal) {
+    logger.fatal = function(message, meta) {
+        this.error('FATAL: ' + message, meta);
+    };
+}
+
 // 未捕获异常处理
 process.on('uncaughtException', (error) => {
     logger.fatal('Uncaught Exception', {

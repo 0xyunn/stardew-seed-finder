@@ -1,3 +1,5 @@
-The file changes consist only of JavaScript source files (.js) being deleted and modified. No build artifacts, dependencies, temporary files, or other ignorable content is present in the changes.
-
-No .gitignore rules are needed for this scenario.
+```
+# Logs
+*.log
+logs/
+```
