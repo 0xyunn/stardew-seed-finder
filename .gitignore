@@ -1,0 +1,1 @@
+Nothing needs to be added to the .gitignore file since the changes only include JavaScript source files (.js) which are core application code and should be tracked in version control.

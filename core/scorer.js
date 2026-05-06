@@ -1,5 +1,6 @@
 /**
  * 评分引擎 - 计算种子综合得分
+ * 修复：移除不合理的 S 型曲线归一化，采用线性缩放避免高分段饱和
  */
 const logger = require('../utils/logger');
 
@@ -26,34 +27,23 @@ class Scorer {
             .length;
 
         if (criticalFailures > 0) {
-            // 每个关键失败乘以0.1的惩罚
+            // 每个关键失败乘以 0.1 的惩罚
             return Math.max(0, weightedScore * Math.pow(0.1, criticalFailures));
         }
 
         // 3. 奖励机制：多维度均衡
         const positiveScores = Object.values(breakdown).filter(s => s > 0);
         if (positiveScores.length >= conditions.length * 0.8 && conditions.length > 1) {
-            // 80%以上条件都满足，额外奖励10-20%
+            // 80% 以上条件都满足，额外奖励 10-20%
             const bonus = 1 + (positiveScores.length / conditions.length) * 0.2;
             return Math.min(1000, weightedScore * bonus);
         }
 
-        // 4. S型曲线归一化到0-1000
-        return this._sigmoidNormalize(weightedScore, 0, 1000);
-    }
-
-    /**
-     * S型曲线归一化
-     * @private
-     */
-    _sigmoidNormalize(value, min, max) {
-        // 将值映射到0-1（假设100分为满分基准）
-        const normalized = Math.max(0, Math.min(1, value / 100));
-        // S型曲线：中等分数更分散，极端分数更集中
-        const steepness = 5;
-        const midpoint = 0.5;
-        const sigmoid = 1 / (1 + Math.exp(-steepness * (normalized - midpoint)));
-        return min + sigmoid * (max - min);
+        // 4. 线性缩放至 0-1000（修复：不再使用 S 型曲线导致高分饱和）
+        // 假设理论最高分为 200 分/条件，按比例缩放
+        const theoreticalMax = 200 * conditions.length / totalWeight;
+        const normalizedScore = Math.min(1, weightedScore / theoreticalMax);
+        return normalizedScore * 1000;
     }
 
     /**
