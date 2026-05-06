@@ -10087,3 +10087,10 @@
 {"level":"info","message":"💾 Results saved to: /tmp/results.json","service":"stardew-seed-finder","timestamp":"2026-05-06 12:24:50"}
 {"level":"info","message":"⏱️  Processed 101 seeds in 0.11s","service":"stardew-seed-finder","timestamp":"2026-05-06 12:24:50"}
 {"level":"info","message":"⚡ Average: 918 seeds/sec","service":"stardew-seed-finder","timestamp":"2026-05-06 12:24:50"}
+{"component":"scanner","level":"debug","message":"Added condition: cartItem: [Red Cabbage Seeds, Rare Seed] at spring Y1 week 1","service":"stardew-seed-finder","timestamp":"2026-05-06 12:30:17"}
+{"component":"scanner","level":"debug","message":"Added condition: weatherRain [weight:5]","service":"stardew-seed-finder","timestamp":"2026-05-06 12:30:17"}
+{"component":"scanner","level":"debug","message":"Added condition: cartItem: [Red Cabbage Seeds, Rare Seed] at spring Y1 week 1","service":"stardew-seed-finder","timestamp":"2026-05-06 12:30:26"}
+{"component":"scanner","level":"debug","message":"Added condition: weatherRain [weight:5]","service":"stardew-seed-finder","timestamp":"2026-05-06 12:30:26"}
+{"component":"scanner","concurrency":2,"conditions":2,"level":"info","message":"Starting scan: 50000000 - 50000050","minScore":0,"service":"stardew-seed-finder","timestamp":"2026-05-06 12:30:26","topN":5}
+{"component":"scanner","level":"info","message":"Early exit: sufficient high-quality results found","service":"stardew-seed-finder","timestamp":"2026-05-06 12:30:27"}
+{"component":"scanner","level":"info","message":"Scan complete: 51 seeds in 75ms, 29 matches","service":"stardew-seed-finder","timestamp":"2026-05-06 12:30:27"}

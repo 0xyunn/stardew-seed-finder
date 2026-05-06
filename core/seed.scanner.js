@@ -160,6 +160,7 @@ class SeedScanner {
             const breakdown = {};
             let totalScore = 0;
             const details = {};
+            let allConditionsMet = true;
 
             for (const condition of this.conditions) {
                 // 为条件提供完整的 gameData（包含季节和年份信息）
@@ -173,7 +174,18 @@ class SeedScanner {
                 const result = await condition.evaluate(seed, gameData);
                 breakdown[condition.name] = result.score;
                 details[condition.name] = result.details;
+                
+                // 检查该条件是否满足（负分或 0 分表示不满足）
+                if (result.score <= 0) {
+                    allConditionsMet = false;
+                }
+                
                 totalScore += result.score;
+            }
+
+            // 关键修复：如果任一条件未满足，直接返回 null（不记录该种子）
+            if (!allConditionsMet) {
+                return null;
             }
 
             // 计算最终得分
