@@ -10094,3 +10094,25 @@
 {"component":"scanner","concurrency":2,"conditions":2,"level":"info","message":"Starting scan: 50000000 - 50000050","minScore":0,"service":"stardew-seed-finder","timestamp":"2026-05-06 12:30:26","topN":5}
 {"component":"scanner","level":"info","message":"Early exit: sufficient high-quality results found","service":"stardew-seed-finder","timestamp":"2026-05-06 12:30:27"}
 {"component":"scanner","level":"info","message":"Scan complete: 51 seeds in 75ms, 29 matches","service":"stardew-seed-finder","timestamp":"2026-05-06 12:30:27"}
+{"level":"info","message":"🎮 Stardew Seed Finder starting...","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"info","message":"📄 Loading config: config/my-search.json","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"info","message":"Loaded config from: config/my-search.json","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"debug","message":"Config validation passed","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"info","message":"🔧 Initializing condition system...","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"debug","message":"Registered condition: cartItem","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"debug","message":"Loaded condition: cartItem from cart.item.js","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"debug","message":"Registered condition: seasonItem","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"debug","message":"Loaded condition: seasonItem from season.item.js","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"debug","message":"Registered condition: weatherRain","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"debug","message":"Loaded condition: weatherRain from weather.rain.js","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"info","message":"Loaded 3 condition types","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"component":"scanner","level":"debug","message":"Added condition: cartItem: [Red Cabbage Seeds, Rare Seed] at spring Y1 week 1","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"component":"scanner","level":"debug","message":"Added condition: weatherRain [weight:5]","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"info","message":"✅ Loaded 2 active condition(s)","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"component":"scanner","concurrency":4,"conditions":2,"level":"info","message":"Starting scan: 50000000 - 50005000","minScore":0,"service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45","topN":5}
+{"component":"scanner","level":"info","message":"Early exit: sufficient high-quality results found","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"component":"scanner","level":"info","message":"Scan complete: 1000 seeds in 406ms, 600 matches","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"info","message":"✅ Found 5 matching seed(s)","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"info","message":"💾 Results saved to: results.json","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"info","message":"⏱️  Processed 5,001 seeds in 0.44s","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}
+{"level":"info","message":"⚡ Average: 11,365 seeds/sec","service":"stardew-seed-finder","timestamp":"2026-05-06 12:47:45"}

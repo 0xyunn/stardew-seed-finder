@@ -87,6 +87,7 @@ class CartItemCondition extends BaseCondition {
         return {
             score: score * this.weight,
             details: {
+                items: foundItems.map(f => f.item),
                 found: foundItems,
                 expected: items,
                 season: `${season} Y${year}`,
